@@ -6,6 +6,10 @@ More details about Kamailio SIP Server project can be found at:
 
   * https://www.kamailio.org
 
+The code for this extension is hosted at:
+
+  * https://github.com/miconda/vscode-kamailio-syntax
+
 ## Features
 
 Syntax highlighting for:
