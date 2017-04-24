@@ -1,0 +1,26 @@
+{
+    "name": "kamailio-syntax",
+    "displayName": "kamailio-syntax",
+    "description": "Syntax highlighting for Kamailio configuration file",
+    "version": "1.0.0",
+    "publisher": "miconda",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kamailio",
+            "aliases": ["kamailio"],
+            "extensions": [".cfg", ".inc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kamailio",
+            "scopeName": "source.kamailio",
+            "path": "./syntaxes/kamailio.tmLanguage.json"
+        }]
+    }
+}

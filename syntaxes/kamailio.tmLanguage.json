@@ -1,0 +1,193 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "kamailio",
+	"firstLineMatch": "\\b(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router|OPENSER|openser)\\b",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"match": "(\\#[!]|[!]{2})(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router)\\b",
+			"name": "support.class.kamailio"
+		},
+		{
+			"comment": "Preprocessor directives with ID",
+			"match": "(\\#!define|\\#!ifdef|\\#!ifndef|\\#!trydef)\\s*(\\w*)\\b",
+			"captures": {
+				"1": {
+					"name": "storage.type.primitive.kamailio"
+				},
+				"2": {
+					"name": "constant.other.kamailio"
+				}
+			},
+			"name": "storage.type.primitive.kamailio"
+		},
+		{
+			"comment": "Preprocessor directives without ID",
+			"match": "(\\#!else|\\#!endif|\\#!subst|\\#!substdef)\\b",
+			"name": "storage.type.primitive.kamailio"
+		},
+		{
+			"comment": "Line comment",
+			"begin": "\\#[^!]",
+			"end": "\\n",
+			"name": "comment.line.number-sign.kamailio"
+		},
+		{
+			"comment": "Line comment",
+			"begin": "//",
+			"end": "\\n",
+			"name": "comment.line.double-slash.kamailio"
+		},
+		{
+			"comment": "Block comment",
+			"begin": "/\\*",
+			"end": "\\*/",
+			"name": "comment.block.kamailio"
+		},
+		{
+			"begin": "\"",
+			"end": "\"",
+			"name": "string.quoted.double.kamailio"
+		},
+		{
+			"match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b",
+			"name": "constant.numeric.kamailio"
+		},
+		{
+			"comment": "Main routing blocks without name",
+			"match": "\\b(request_route|reply_route|onsend_route)\\b",
+			"name": "support.function.kamailio"
+		},
+		{
+			"comment": "Main routing blocks with name",
+			"match": "\\b(route|branch_route|failure_route|onreply_route|event_route)\\s*\\[([^\\]]+)\\]",
+			"captures": {
+				"1": {
+					"name": "entity.name.class.kamailio"
+				},
+				"2": {
+					"name": "constant.other.kamailio"
+				}
+			},
+			"name": "support.function.kamailio"
+		},
+		{
+			"comment": "Executing routing blocks with name",
+			"match": "\\b(route)\\s*\\(([^)]+)\\)",
+			"captures": {
+				"1": {
+					"name": "keyword.source.kamailio"
+				},
+				"2": {
+					"name": "constant.other.kamailio"
+				}
+			},
+			"name": "support.function.kamailio"
+		},
+		{
+			"match": "\\b(exit|return|drop|break|if|else|while|switch|case|default)\\b",
+			"name": "keyword.control.conditional.kamailio"
+		},
+		{
+			"match": "\\b(include_file|import_file)\\b",
+			"name": "storage.type.primitive.kamailio"
+		},
+		{
+			"match": "(\\#[!]|[!]{2})(include_file|import_file)\\b",
+			"name": "storage.type.primitive.kamailio"
+		},
+		{
+			"match": "(\\$)null\\b",
+			"name": "constant.language.null.kamailio"
+		},
+		{
+			"comment": "variables with inner name and root parenthesis",
+			"match": "(\\$)\\([a-zA-Z0-9_]+\\(([a-zA-Z0-9_]+)\\)\\)",
+			"captures": {
+				"1": {
+					"name": "support.variable.kamailio"
+				},
+				"2": {
+					"name": "constant.other.kamailio"
+				}
+			},
+			"name": "support.variable.kamailio"
+		},
+		{
+			"comment": "variables with inner name",
+			"match": "(\\$)[a-zA-Z0-9_]+\\(([a-zA-Z0-9_]+)\\)",
+			"captures": {
+				"1": {
+					"name": "support.variable.kamailio"
+				},
+				"2": {
+					"name": "constant.other.kamailio"
+				}
+			},
+			"name": "support.variable.kamailio"
+		},
+		{
+			"comment": "variables with simple name and root parenthesis",
+			"match": "(\\$)\\([a-zA-Z0-9_]+\\)",
+			"name": "support.variable.kamailio"
+		},
+		{
+			"comment": "variables with simple name",
+			"match": "(\\$)[a-zA-Z0-9_]+\\b",
+			"name": "support.variable.kamailio"
+		},
+		{
+			"match": "\\b(true|yes|on|enabled)\\b",
+			"name": "constant.language.boolean.true.kamailio"
+		},
+		{
+			"match": "\\b(false|no|off|disabled)\\b",
+			"name": "constant.language.boolean.false.kamailio"
+		},
+		{
+			"match": "\\b(loadmodule|modparam)\\b",
+			"name": "keyword.source.kamailio"
+		},
+		{
+			"comment": "Core keyword variables",
+			"match": "\\b(af|dst_ip|dst_port|from_uri|method|msg:len|proto|status|snd_af|snd_ip|snd_port|snd_proto|src_ip|src_port|to_af|to_ip|to_port|to_proto|to_uri|uri|uri:host|uri:port)\\b",
+			"name": "support.variable.kamailio"
+		},
+		{
+			"comment": "Core keyword values",
+			"match": "\\b(max_len|myself|udp|UDP|tcp|TCP|tls|TLS|sctp|SCTP|ws|WS|wss|WSS|inet|INET|inet6|INET6|sslv23|SSLv23|SSLV23|sslv2|SSLv2|SSLV2|sslv3|SSLv3|SSLV3|tlsv1|TLSv1|TLSV1)\\b",
+			"name": "constant.language.kamailio"
+		},
+		{
+			"match": "=|~|<|>|\\+|-|\\*|\\^|&|/|\\||!|\\b(?i:(mod|and|not|or|xor|defined|eq|ieq|ne|ine))\\b",
+			"name": "keyword.operator.kamailio"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.kamailio",
+					"match": "\\b(if|while|switch|case|break|default|return|drop|exit)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.kamailio",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.kamailio",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.kamailio"
+}
