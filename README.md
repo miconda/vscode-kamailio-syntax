@@ -53,8 +53,13 @@ Tested only on MacOS.
 
 ## Release Notes
 
+### 1.0.1 (2017-04-26)
+
+  * matching rules for a few more keywords
+  * highlight single quoted strings
+
 ### 1.0.0 (2017-04-24)
 
-Initial release.
+  * initial release
 
 **Enjoy!**
