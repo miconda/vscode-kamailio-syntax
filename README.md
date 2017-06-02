@@ -53,13 +53,11 @@ Tested only on MacOS.
 
 ## Release Notes
 
-### 1.0.1 (2017-04-26)
+### 1.0.2 (2017-06-02)
 
-  * matching rules for a few more keywords
-  * highlight single quoted strings
+  * detect preprocessor directives starting with #! or !!
+  * highlight syslog facility values, loadpath, mpath and cfgengine
 
-### 1.0.0 (2017-04-24)
-
-  * initial release
+For release notes of older versions, see [CHANGELOG.md](https://github.com/miconda/vscode-kamailio-syntax/blob/master/CHANGELOG.md) file.
 
 **Enjoy!**
