@@ -10,12 +10,12 @@
 			"include": "#strings"
 		},
 		{
-			"match": "(\\#[!]|[!]{2})(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router)\\b",
+			"match": "\\b(\\#[!]|[!]{2})(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router)\\b",
 			"name": "support.class.kamailio"
 		},
 		{
 			"comment": "Preprocessor directives with ID",
-			"match": "(\\#!define|\\#!ifdef|\\#!ifndef|\\#!trydefine|\\#!trydef|\\#!redefine|\\#!redef)\\s*(\\w*)\\b",
+			"match": "\\b(\\#[!]|[!]{2})(define|ifdef|ifndef|trydefine|trydef|redefine|redef)\\s*(\\w*)\\b",
 			"captures": {
 				"1": {
 					"name": "storage.type.primitive.kamailio"
@@ -28,7 +28,7 @@
 		},
 		{
 			"comment": "Preprocessor directives without ID",
-			"match": "(\\#!else|\\#!endif|\\#!subst|\\#!substdef|\\#!substdefs)\\b",
+			"match": "\\b(\\#[!]|[!]{2})(else|endif|subst|substdef|substdefs)\\b",
 			"name": "storage.type.primitive.kamailio"
 		},
 		{
@@ -155,7 +155,7 @@
 			"name": "constant.language.boolean.false.kamailio"
 		},
 		{
-			"match": "\\b(loadmodule|modparam)\\b",
+			"match": "\\b(loadmodule|modparam|loadpath|mpath|cfgengine)\\b",
 			"name": "keyword.source.kamailio"
 		},
 		{
@@ -166,6 +166,11 @@
 		{
 			"comment": "Core keyword values",
 			"match": "\\b(max_len|myself|udp|UDP|tcp|TCP|tls|TLS|sctp|SCTP|ws|WS|wss|WSS|inet|INET|inet6|INET6|sslv23|SSLv23|SSLV23|sslv2|SSLv2|SSLV2|sslv3|SSLv3|SSLV3|tlsv1|TLSv1|TLSV1)\\b",
+			"name": "constant.language.kamailio"
+		},
+		{
+			"comment": "Syslog facility values",
+			"match": "\\b(LOG_LOCAL[0-9]+)\\b",
 			"name": "constant.language.kamailio"
 		},
 		{
