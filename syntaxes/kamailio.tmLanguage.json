@@ -3,13 +3,16 @@
 	"name": "kamailio",
 	"firstLineMatch": "\\b(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router|OPENSER|openser)\\b",
 	"foldingStartMarker": "(?x)/\\*\\*(?!\\*)|^(?![^{]*?//|[^{]*?/\\*(?!.*?\\*/.*?\\{)).*?\\{\\s*($|//|/\\*(?!.*?\\*/.*\\S))",
-    	"foldingStopMarker": "(?<!\\*)\\*\\*/|^\\s*\\}",
+	"foldingStopMarker": "(?<!\\*)\\*\\*/|^\\s*\\}",
 	"patterns": [
 		{
 			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#punctuation"
 		},
 		{
 			"match": "\\b(\\#[!]|[!]{2})(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router)\\b",
@@ -197,6 +200,22 @@
 				{
 					"name": "constant.character.escape.kamailio",
 					"match": "\\\\."
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"match": ",",
+					"name": "punctuation.comma.kamailio"
+				},
+				{
+					"match": ";",
+					"name": "punctuation.terminator.kamailio"
+				},
+				{
+					"match": "\\.",
+					"name": "punctuation.dot.kamailio"
 				}
 			]
 		}
