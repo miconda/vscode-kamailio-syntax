@@ -1,3 +1,8 @@
+## 1.0.3 (2017-07-28)
+
+  * block folding support
+  * punctuation highlighting
+
 ## 1.0.2 (2017-06-02)
 
   * detect preprocessor directives starting with #! or !!

@@ -53,10 +53,10 @@ Tested only on MacOS.
 
 ## Release Notes
 
-### 1.0.2 (2017-06-02)
+### 1.0.3 (2017-07-28)
 
-  * detect preprocessor directives starting with #! or !!
-  * highlight syslog facility values, loadpath, mpath and cfgengine
+  * block folding support
+  * punctuation highlighting
 
 For release notes of older versions, see [CHANGELOG.md](https://github.com/miconda/vscode-kamailio-syntax/blob/master/CHANGELOG.md) file.
 
