@@ -47,9 +47,10 @@ git clone https://github.com/miconda/vscode-kamailio-syntax
 
 The extension needs to be enabled from VSCode preferences.
 
+Tested on MacOs, Windows (10)
+
 ## Known Issues
 
-Tested only on MacOS.
 
 ## Release Notes
 
