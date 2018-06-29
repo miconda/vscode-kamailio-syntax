@@ -15,17 +15,17 @@
 			"include": "#punctuation"
 		},
 		{
-			"match": "\\b(\\#[!]|[!]{2})(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router)\\b",
+			"match": "(\\#[!]|[!]{2})(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router)\\b",
 			"name": "support.class.kamailio"
 		},
 		{
 			"comment": "Preprocessor directives with ID",
-			"match": "\\b(\\#[!]|[!]{2})(define|ifdef|ifndef|trydefine|trydef|redefine|redef)\\s*(\\w*)\\b",
+			"match": "(\\#[!]|[!]{2})(define|ifdef|ifndef|trydefine|trydef|redefine|redef)\\s*(\\w*)\\b",
 			"captures": {
-				"1": {
+				"2": {
 					"name": "storage.type.primitive.kamailio"
 				},
-				"2": {
+				"3": {
 					"name": "constant.other.kamailio"
 				}
 			},
@@ -33,7 +33,7 @@
 		},
 		{
 			"comment": "Preprocessor directives without ID",
-			"match": "\\b(\\#[!]|[!]{2})(else|endif|subst|substdef|substdefs)\\b",
+			"match": "(\\#[!]|[!]{2})(else|endif|subst|substdef|substdefs)\\b",
 			"name": "storage.type.primitive.kamailio"
 		},
 		{
