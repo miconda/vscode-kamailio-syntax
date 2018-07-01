@@ -49,8 +49,6 @@ The extension needs to be enabled from VSCode preferences.
 
 Tested on MacOs, Windows (10)
 
-## Known Issues
-
 
 ## Release Notes
 
