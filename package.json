@@ -2,7 +2,7 @@
     "name": "kamailio-syntax",
     "displayName": "kamailio-syntax",
     "description": "Syntax highlighting for Kamailio configuration file",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "miconda",
     "engines": {
         "vscode": "^1.11.0"
