@@ -1,3 +1,8 @@
+## 1.0.4 (2018-07-02)
+
+  * highlight desc and advertise keywords
+  * proper match for preprocessor directives
+
 ## 1.0.3 (2017-07-28)
 
   * block folding support

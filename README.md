@@ -52,10 +52,10 @@ Tested on MacOs, Windows (10)
 
 ## Release Notes
 
-### 1.0.3 (2017-07-28)
+## 1.0.4 (2018-07-02)
 
-  * block folding support
-  * punctuation highlighting
+  * highlight desc and advertise keywords
+  * proper match for preprocessor directives
 
 For release notes of older versions, see [CHANGELOG.md](https://github.com/miconda/vscode-kamailio-syntax/blob/master/CHANGELOG.md) file.
 
