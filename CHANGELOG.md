@@ -1,8 +1,16 @@
-## 1.0.5 (2020-01-28)
+## 1.0.7 (2020-01-28)
 
   * changed the comment.line.number-sign.kamailio to catch
   use of `#` in select transformation
   * added repository and homepage fields to package meta
+
+## 1.0.6 (2020-01-28)
+
+  * vcse version autoincrement
+
+## 1.0.5 (2020-01-28)
+
+  * vcse version autoincrement
 
 ## 1.0.4 (2018-07-02)
 

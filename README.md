@@ -52,7 +52,7 @@ Tested on MacOs, Windows (10)
 
 ## Release Notes
 
-## 1.0.5 (2020-01-28)
+## 1.0.7 (2020-01-28)
 
   * changed the comment.line.number-sign.kamailio to catch
   use of `#` in select transformation
