@@ -52,10 +52,11 @@ Tested on MacOs, Windows (10)
 
 ## Release Notes
 
-## 1.0.4 (2018-07-02)
+## 1.0.5 (2020-01-28)
 
-  * highlight desc and advertise keywords
-  * proper match for preprocessor directives
+  * changed the comment.line.number-sign.kamailio to catch
+  use of `#` in select transformation
+  * added repository and homepage fields to package meta
 
 For release notes of older versions, see [CHANGELOG.md](https://github.com/miconda/vscode-kamailio-syntax/blob/master/CHANGELOG.md) file.
 
