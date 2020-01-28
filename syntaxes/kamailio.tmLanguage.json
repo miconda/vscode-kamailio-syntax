@@ -38,7 +38,7 @@
 		},
 		{
 			"comment": "Line comment",
-			"begin": "\\#[^!]",
+			"begin": "(?<!{s.select,[0-9]|[0-9]|[0-9],)\\#[^!]",
 			"end": "\\n",
 			"name": "comment.line.number-sign.kamailio"
 		},
