@@ -2,7 +2,7 @@
     "name": "kamailio-syntax",
     "displayName": "kamailio-syntax",
     "description": "Syntax highlighting for Kamailio configuration file",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "publisher": "miconda",
     "engines": {
         "vscode": "^1.11.0"
@@ -11,17 +11,26 @@
         "Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "kamailio",
-            "aliases": ["kamailio"],
-            "extensions": [".cfg", ".inc"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "kamailio",
-            "scopeName": "source.kamailio",
-            "path": "./syntaxes/kamailio.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "kamailio",
+                "aliases": [
+                    "kamailio"
+                ],
+                "extensions": [
+                    ".cfg",
+                    ".inc"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "kamailio",
+                "scopeName": "source.kamailio",
+                "path": "./syntaxes/kamailio.tmLanguage.json"
+            }
+        ]
     },
     "repository": {
         "type": "git",
