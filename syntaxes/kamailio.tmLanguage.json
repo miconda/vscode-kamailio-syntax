@@ -188,7 +188,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.kamailio",
-					"match": "\\b(if|while|switch|case|break|default|return|drop|exit|desc|advertise)\\b"
+					"match": "\\b(if|while|switch|case|break|default|return|drop|exit|desc|advertise|name)\\b"
 				}
 			]
 		},
