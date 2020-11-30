@@ -15,12 +15,12 @@
 			"include": "#punctuation"
 		},
 		{
-			"match": "(\\#[!]|[!]{2})(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router)\\b",
+			"match": "(\\#[!]|[!]{2})(KAMAILIO|kamailio|SER|ser|SIP-ROUTER|sip-router|ALL|all)\\b",
 			"name": "support.class.kamailio"
 		},
 		{
 			"comment": "Preprocessor directives with ID",
-			"match": "(\\#[!]|[!]{2})(define|ifdef|ifndef|trydefine|trydef|redefine|redef)\\s*(\\w*)\\b",
+			"match": "(\\#[!]|[!]{2})(define|ifdef|ifndef|trydefine|trydef|redefine|redef|defenv)\\s*(\\w*)\\b",
 			"captures": {
 				"2": {
 					"name": "storage.type.primitive.kamailio"
