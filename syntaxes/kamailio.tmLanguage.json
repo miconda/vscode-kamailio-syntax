@@ -9,6 +9,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#conditionals"
+		},
+		{
 			"include": "#stringdq"
 		},
 		{
@@ -98,10 +101,6 @@
 			"name": "support.function.kamailio"
 		},
 		{
-			"match": "\\b(exit|return|drop|break|if|else|while|switch|case|default)\\b",
-			"name": "keyword.control.conditional.kamailio"
-		},
-		{
 			"match": "\\b(include_file|import_file)\\b",
 			"name": "storage.type.primitive.kamailio"
 		},
@@ -188,7 +187,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.kamailio",
-					"match": "\\b(if|while|switch|case|break|default|return|drop|exit|desc|advertise|name)\\b"
+					"match": "\\b(return|exit|drop|desc|advertise|name)\\b"
+				}
+			]
+		},
+		"conditionals": {
+			"patterns": [
+				{
+					"name": "keyword.control.conditional.kamailio",
+					"match": "\\b(if|else|while|switch|case|break|default)\\b"
 				}
 			]
 		},
