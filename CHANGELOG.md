@@ -1,3 +1,14 @@
+## 1.0.8 (2020-12-01)
+
+  * added name to control keywords list
+  * added defenv to defines list
+  * added all file type line
+  * catch empty comment line started with #
+  * match variables with index and transformations
+  * the index and transformations are highlighted separately
+  * split conditionals from keywords
+  * highlight control functions in own group
+
 ## 1.0.7 (2020-01-28)
 
   * changed the comment.line.number-sign.kamailio to catch
