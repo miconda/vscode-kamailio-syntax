@@ -9,6 +9,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#controls"
+		},
+		{
 			"include": "#conditionals"
 		},
 		{
@@ -92,7 +95,7 @@
 			"match": "\\b(route)\\s*\\(([^)]+)\\)",
 			"captures": {
 				"1": {
-					"name": "keyword.source.kamailio"
+					"name": "entity.name.function.kamailio"
 				},
 				"2": {
 					"name": "constant.other.kamailio"
@@ -187,7 +190,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.kamailio",
-					"match": "\\b(return|exit|drop|desc|advertise|name)\\b"
+					"match": "\\b(desc|advertise|name)\\b"
+				}
+			]
+		},
+		"controls": {
+			"patterns": [
+				{
+					"name": "entity.name.function.kamailio",
+					"match": "\\b(return|exit|drop)\\b"
 				}
 			]
 		},
