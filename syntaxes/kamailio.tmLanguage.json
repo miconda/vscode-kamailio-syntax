@@ -9,7 +9,10 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#stringdq"
+		},
+		{
+			"include": "#stringsq"
 		},
 		{
 			"include": "#punctuation"
@@ -43,7 +46,7 @@
 		},
 		{
 			"comment": "Line comment",
-			"begin": "(?<!{s.select,[0-9]|[0-9]|[0-9],)\\#[^!]",
+			"begin": "\\#[^!]",
 			"end": "\\n",
 			"name": "comment.line.number-sign.kamailio"
 		},
@@ -58,16 +61,6 @@
 			"begin": "/\\*",
 			"end": "\\*/",
 			"name": "comment.block.kamailio"
-		},
-		{
-			"begin": "\"",
-			"end": "\"",
-			"name": "string.quoted.double.kamailio"
-		},
-		{
-			"begin": "'",
-			"end": "'",
-			"name": "string.quoted.single.kamailio"
 		},
 		{
 			"match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b",
@@ -121,34 +114,36 @@
 			"name": "constant.language.null.kamailio"
 		},
 		{
-			"comment": "variables with inner name and root parenthesis",
-			"match": "(\\$)\\([a-zA-Z0-9_]+\\(([a-zA-Z0-9_]+)\\)\\)",
-			"captures": {
-				"1": {
-					"name": "support.variable.kamailio"
+			"comment": "variables with inner name, root parenthesis, index and transformation",
+			"begin": "(\\$)\\([a-zA-Z0-9_]+\\(([a-zA-Z0-9_]+)\\)",
+			"end": "\\)",
+			"patterns": [
+				{
+					"include": "#index"
 				},
-				"2": {
-					"name": "constant.other.kamailio"
+				{
+					"include": "#transformation"
 				}
-			},
+			],
+			"name": "support.variable.kamailio"
+		},
+		{
+			"comment": "variables with simple name, root parenthesis, index and transformations",
+			"begin": "(\\$)\\([a-zA-Z0-9_]+",
+			"end": "\\)",
+			"patterns": [
+				{
+					"include": "#index"
+				},
+				{
+					"include": "#transformation"
+				}
+			],
 			"name": "support.variable.kamailio"
 		},
 		{
 			"comment": "variables with inner name",
 			"match": "(\\$)[a-zA-Z0-9_]+\\(([a-zA-Z0-9_]+)\\)",
-			"captures": {
-				"1": {
-					"name": "support.variable.kamailio"
-				},
-				"2": {
-					"name": "constant.other.kamailio"
-				}
-			},
-			"name": "support.variable.kamailio"
-		},
-		{
-			"comment": "variables with simple name and root parenthesis",
-			"match": "(\\$)\\([a-zA-Z0-9_]+\\)",
 			"name": "support.variable.kamailio"
 		},
 		{
@@ -197,10 +192,21 @@
 				}
 			]
 		},
-		"strings": {
+		"stringdq": {
 			"name": "string.quoted.double.kamailio",
 			"begin": "\"",
 			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.kamailio",
+					"match": "\\\\."
+				}
+			]
+		},
+		"stringsq": {
+			"name": "string.quoted.single.kamailio",
+			"begin": "'",
+			"end": "'",
 			"patterns": [
 				{
 					"name": "constant.character.escape.kamailio",
@@ -223,6 +229,17 @@
 					"name": "punctuation.dot.kamailio"
 				}
 			]
+		},
+		"transformation": {
+			"begin": "\\{(s|uri|param|nameaddr|tobody|re|line|sql|msrpuri|json|url)\\.",
+			"end": "\\}",
+			"name": "entity.name.function.kamailio"
+
+		},
+		"index": {
+			"match": "\\[.+\\]",
+			"name": "variable.parameter.kamailio"
+
 		}
 	},
 	"scopeName": "source.kamailio"
