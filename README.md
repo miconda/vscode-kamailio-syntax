@@ -18,7 +18,7 @@ Syntax highlighting for:
   * block comments
   * preprocessor directive
   * routing block names
-  * variables
+  * variables, indexes and transformations
   * string and integer values
   * reserved keywords
 
@@ -47,16 +47,21 @@ git clone https://github.com/miconda/vscode-kamailio-syntax
 
 The extension needs to be enabled from VSCode preferences.
 
-Tested on MacOs, Windows (10)
+Tested on MacOs, Linux, Windows (10)
 
 
 ## Release Notes
 
-## 1.0.7 (2020-01-28)
+## 1.0.8 (2020-12-01)
 
-  * changed the comment.line.number-sign.kamailio to catch
-  use of `#` in select transformation
-  * added repository and homepage fields to package meta
+  * added name to control keywords list
+  * added defenv to defines list
+  * added all file type line
+  * catch empty comment line started with #
+  * match variables with index and transformations
+  * the index and transformations are highlighted separately
+  * split conditionals from keywords
+  * highlight control functions in own group
 
 For release notes of older versions, see [CHANGELOG.md](https://github.com/miconda/vscode-kamailio-syntax/blob/master/CHANGELOG.md) file.
 
