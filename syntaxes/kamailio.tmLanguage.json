@@ -198,11 +198,11 @@
 			"patterns": [
 				{
 					"name": "constant.language.kamailio",
-					"match": "\\b(INVITE|ACK|BYE|CANCEL|PRACK|UPDATE|REGISTER|MESSAGE|INFO|OPTIONS|SUBSCRIBE|NOTIFY|PUBLISH|GET|POST|PUT|KDMQ)\\b"
+					"match": "\\b(INVITE|ACK|BYE|CANCEL|PRACK|UPDATE|REGISTER|MESSAGE|INFO|OPTIONS|SUBSCRIBE|NOTIFY|PUBLISH|REFER|KDMQ|GET|POST|PUT|DELETE)\\b"
 				},
 				{
 					"name": "constant.language.kamailio",
-					"match": "\\b(SIP|From|To|Call-ID|CSeq|Route|Record-Route|Authorization|Proxy-Authorization|Contact|Expires|Via)\\b"
+					"match": "\\b(SIP|From|To|Call-ID|CSeq|Route|Record-Route|Authorization|Proxy-Authorization|Contact|Expires|Content-Type|Content-Length|Via)\\b"
 				}
 			]
 		},
