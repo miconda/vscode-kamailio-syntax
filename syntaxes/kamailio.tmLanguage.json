@@ -194,6 +194,18 @@
 				}
 			]
 		},
+		"sipkeywords": {
+			"patterns": [
+				{
+					"name": "constant.language.kamailio",
+					"match": "\\b(INVITE|ACK|BYE|CANCEL|PRACK|UPDATE|REGISTER|MESSAGE|INFO|OPTIONS|SUBSCRIBE|NOTIFY|PUBLISH|GET|POST|PUT|KDMQ)\\b"
+				},
+				{
+					"name": "constant.language.kamailio",
+					"match": "\\b(SIP|From|To|Call-ID|CSeq|Route|Record-Route|Authorization|Proxy-Authorization|Contact|Expires|Via)\\b"
+				}
+			]
+		},
 		"controls": {
 			"patterns": [
 				{
@@ -218,6 +230,9 @@
 				{
 					"name": "constant.character.escape.kamailio",
 					"match": "\\\\."
+				},
+				{
+					"include": "#sipkeywords"
 				}
 			]
 		},
@@ -229,6 +244,9 @@
 				{
 					"name": "constant.character.escape.kamailio",
 					"match": "\\\\."
+				},
+				{
+					"include": "#sipkeywords"
 				}
 			]
 		},
