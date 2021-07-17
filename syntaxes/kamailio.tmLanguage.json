@@ -162,7 +162,7 @@
 			"name": "constant.language.boolean.false.kamailio"
 		},
 		{
-			"match": "\\b(loadmodule|modparam|loadpath|mpath|cfgengine)\\b",
+			"match": "\\b(loadmodule|loadmodulex|modparam|modparamx|loadpath|mpath|cfgengine)\\b",
 			"name": "keyword.source.kamailio"
 		},
 		{
