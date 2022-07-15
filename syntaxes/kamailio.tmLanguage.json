@@ -29,7 +29,7 @@
 		},
 		{
 			"comment": "Preprocessor directives with ID",
-			"match": "(\\#[!]|[!]{2})(define|ifdef|ifndef|trydefine|trydef|redefine|redef|defenv)\\s*(\\w*)\\b",
+			"match": "(\\#[!]|[!]{2})(define|ifdef|ifndef|trydefine|trydef|redefine|redef|defenv|defenvs|trydefenv|trydefenvs)\\s*(\\w*)\\b",
 			"captures": {
 				"2": {
 					"name": "storage.type.primitive.kamailio"
