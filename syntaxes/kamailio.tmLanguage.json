@@ -267,7 +267,7 @@
 			]
 		},
 		"transformation": {
-			"begin": "\\{(s|uri|param|nameaddr|tobody|re|line|sql|msrpuri|json|url)\\.",
+			"begin": "\\{(s|uri|param|nameaddr|tobody|re|line|sql|msrpuri|json|url|sock|urialias|val)\\.",
 			"end": "\\}",
 			"name": "entity.name.function.kamailio"
 
