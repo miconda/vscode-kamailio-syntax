@@ -202,7 +202,7 @@
 				},
 				{
 					"name": "constant.language.kamailio",
-					"match": "\\b(SIP|From|To|Call-ID|CSeq|Route|Record-Route|Authorization|Proxy-Authorization|Contact|Expires|Content-Type|Content-Length|Via)\\b"
+					"match": "\\b(SIP|From|To|Call-ID|CSeq|Route|Record-Route|Authorization|Proxy-Authorization|Contact|Expires|Content-Type|Content-Length|Via|User-Agent|P-Asserted-Identity)\\b"
 				}
 			]
 		},
