@@ -21,6 +21,7 @@
                     ".cfg",
                     ".inc"
                 ],
+                "firstLine": "^#!KAMAILIO",
                 "configuration": "./language-configuration.json"
             }
         ],
